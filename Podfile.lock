@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.6.0)
+  - DGElasticPullToRefresh (1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - DGElasticPullToRefresh
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
+
+PODFILE CHECKSUM: 3ea76b9d9871558d58251f93b51bfd46531c2e82
+
+COCOAPODS: 1.4.0
