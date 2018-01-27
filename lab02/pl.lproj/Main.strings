@@ -1,0 +1,14 @@
+
+/* Class = "UINavigationItem"; title = "Shoutbox"; ObjectID = "P2R-we-JlA"; */
+"P2R-we-JlA.title" = "Shoutbox";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "XU6-zf-fCp"; */
+"XU6-zf-fCp.text" = "Tytul";
+
+/* Class = "UIButton"; normalTitle = "New"; ObjectID = "lGs-aZ-qK2"; */
+"lGs-aZ-qK2.normalTitle" = "Nowa";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "zD3-Zc-jbO"; */
+"zD3-Zc-jbO.text" = "Wiadomosc";
+
+"minutes ago" = "minut temu"

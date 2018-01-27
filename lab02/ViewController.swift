@@ -52,11 +52,23 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = self.messages[indexPath.row]
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
-        
-        cell.textLabel?.text = message["name"] as? String
+        print(message);
+        cell.textLabel?.text = ((message["name"] as? String)!) + getMinutesAgo(timestamp: (message["timestamp"] as? String)!)
         cell.detailTextLabel?.text = message["message"] as? String
         
         return cell;
+    }
+    
+    func getMinutesAgo(timestamp : String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = dateFormatter.date(from: timestamp)
+        if date != nil {
+            let diff:Int? = Calendar.current.dateComponents([.minute], from: date!, to: Date()).minute
+            return " (\(diff!) " + NSLocalizedString("minutes ago", comment: "minutes ago") + ")"
+        }
+        return " \(timestamp)"
+    
     }
     
     @IBAction func sendNewMessageBtn(_ sender: Any) {
@@ -77,8 +89,6 @@ class ViewController: UIViewController, UITableViewDataSource {
                     if response.result.value is NSNull {
                         return
                     }
-                    let json = response.result.value as? NSDictionary
-                    print("\(json)")
                 });
             }
             
