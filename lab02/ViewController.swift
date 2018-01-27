@@ -86,7 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             
             if ((name?.characters.count) != nil) && ((message?.characters.count) != nil) {
                 Alamofire.request("https://home.agh.edu.pl/~ernst/shoutbox.php?secret=ams2017", method: HTTPMethod.post, parameters: ["name": name!, "message": message!]).responseJSON(completionHandler: { (response) in
-                    if response.result.value is NSNull {
+                    if response.result.value is NSNull {	
                         return
                     }
                 });
